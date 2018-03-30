@@ -51,7 +51,7 @@ func TestPaged(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		a, err := Paged(test.startIndex, test.pageSize, test.nextIndex, test.status, test.payload)
+		a, err := Paged(test.startIndex, test.pageSize, test.nextIndex, test.payload, test.status)
 		if err != nil {
 			t.Fatalf("%s: failed to create response: %v", test.name, err)
 		}

@@ -11,7 +11,7 @@ type PagedResponse struct {
 }
 
 // Paged returns paged data.
-func Paged(startIndex, pageSize, nextIndex int, status int, data interface{}) (r events.APIGatewayProxyResponse, err error) {
+func Paged(startIndex, pageSize, nextIndex int, data interface{}, status int) (r events.APIGatewayProxyResponse, err error) {
 	l := PagedResponse{
 		StartIndex: startIndex,
 		PageSize:   pageSize,
